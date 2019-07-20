@@ -1,1 +1,1 @@
-# RuAttitudes
+# RuAttitudes 1.0

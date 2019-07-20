@@ -1,0 +1,111 @@
+-----------
+File: text-processing-data/Sources/news_2017/201701/01012017-000000-R517858803_htm.zip/01012017-000000-R517864177.htm
+TextID: 400
+Object: 'азербайджан' b:(0,1) oi:[0] si:{294} d:ner <AUTH>
+Object: 'армения' b:(4,1) oi:[1] si:{160} d:ner <AUTH>
+Object: 'нагорный карабах' b:(6,2) oi:[2] si:{-1} d:ner
+Attitude: 'азербайджан'->'армения' b:(-1) oi:[0, 1] si:{294,160}
+FrameVariant: война (2, 1) b:[a0->a1[neg]] id:(0_76)
+Title: Азербайджан идёт войной на Армению и Нагорный Карабах . Кому это выгодно ?
+Sentence: 5
+Object: 'сирия' b:(17,1) oi:[0] si:{288} d:ner <AUTH>
+Object: 'вс' b:(24,1) oi:[1] si:{-1} d:ner
+Object: 'азербайджан' b:(25,1) oi:[2] si:{294} d:ner <AUTH>
+Object: 'юго-восточный садиться' b:(32,2) oi:[3] si:{-1} d:ner
+Object: 'тавушский область' b:(35,2) oi:[4] si:{-1} d:ner
+Object: 'армения' b:(37,1) oi:[5] si:{160} d:ner <AUTH>
+Attitude: 'азербайджан'->'армения' b:(-1) oi:[2, 5] si:{294,160}
+FrameVariant: подписание (14, 1) b:[a0->a1[pos]] id:(1_92)
+FrameVariant: соглашение (15, 1) b:[a0->a1[pos]] id:(0_111)
+FrameVariant: переговоры (20, 1) b:[a0->a1[pos]] id:(1_95)
+Text: Однако ещё 29 декабря с . г . , то есть за сутки до подписания соглашения по Сирии , мирные переговоры были омрачены диверсией ВС Азербайджана на участке государственной границы , расположенной юго-восточнее села Чинари Тавушской области Армении .
+Sentence: 7
+Object: 'азербайджан' b:(27,1) oi:[0] si:{294} d:restored <AUTH>
+Object: 'атаковать республика' b:(28,2) oi:[1] si:{-1} d:ner
+Object: 'арцах' b:(30,1) oi:[2] si:{-1} d:ner
+Object: 'нкр' b:(32,1) oi:[3] si:{237} d:ner
+Object: 'армения' b:(41,1) oi:[4] si:{160} d:ner <AUTH>
+Object: 'россия' b:(47,1) oi:[5] si:{4} d:ner <AUTH>
+Attitude: 'азербайджан'->'армения' b:(-1) oi:[0, 4] si:{294,160}
+FrameVariant: разбираться (1, 1) b:[a0->a1[pos]] id:(0_9)
+FrameVariant: начало (15, 1) b:[] id:(0_146)
+FrameVariant: атаковать (28, 1) b:[a0->a1[neg]] id:(0_152)
+FrameVariant: конфликт (39, 1) b:[a0->a1[neg]] id:(0_90)
+Text: Чтобы разобраться в ситуации , обратимся к опыту первой половины 2016 года , когда в начале апреля ( спустя месяц после первого февральского перемирия в САР ) Азербайджан атаковал Республику Арцах ( НКР ) , чтобы вовлечь в вооруженный конфликт сначала Армению , а затем уже и Россию .
+-----------
+File: text-processing-data/Sources/news_2017/201701/01012017-000000-R517858803_htm.zip/01012017-001152-R517852959.htm
+TextID: 479
+Object: 'norubric' b:(0,1) oi:[0] si:{-1} d:ner
+Object: 'сша' b:(3,1) oi:[1] si:{0} d:ner <AUTH>
+Object: 'украина' b:(9,1) oi:[2] si:{180} d:ner <AUTH>
+Attitude: 'сша'->'украина' b:(1) oi:[1, 2] si:{0,180}
+FrameVariant: помогать (8, 1) b:[a0->a1[pos]] id:(0_8)
+Title: norubric : У США сейчас нет особого смысла помогать Украине , — эксперт
+Sentence: 0
+Object: 'сша' b:(1,1) oi:[0] si:{0} d:ner <AUTH>
+Object: 'украина' b:(7,1) oi:[1] si:{180} d:ner <AUTH>
+Attitude: 'сша'->'украина' b:(1) oi:[0, 1] si:{0,180}
+FrameVariant: помогать (6, 1) b:[a0->a1[pos]] id:(0_8)
+Text: У США сейчас нет особого смысла помогать Украине , — экспертЧитайте :
+-----------
+File: text-processing-data/Sources/news_2017/201701/01012017-000000-R517858803_htm.zip/01012017-001419-R517852446.htm
+TextID: 532
+Object: 'сша' b:(1,1) oi:[0] si:{0} d:ner <AUTH>
+Object: 'украина' b:(7,1) oi:[1] si:{180} d:ner <AUTH>
+Attitude: 'сша'->'украина' b:(1) oi:[0, 1] si:{0,180}
+FrameVariant: помогать (6, 1) b:[a0->a1[pos]] id:(0_8)
+Title: У США сейчас нет особого смысла помогать Украине , — эксперт
+Sentence: 0
+Object: 'украина' b:(1,1) oi:[0] si:{180} d:ner <AUTH>
+Object: 'сша' b:(8,1) oi:[1] si:{0} d:restored <AUTH>
+Attitude: 'сша'->'украина' b:(1) oi:[1, 0] si:{0,180}
+Text: Нынешняя Украина выглядит не очень надежным партнером для США
+Sentence: 7
+Object: 'сша' b:(1,1) oi:[0] si:{0} d:ner <AUTH>
+Object: 'украина' b:(7,1) oi:[1] si:{180} d:ner <AUTH>
+Attitude: 'сша'->'украина' b:(1) oi:[0, 1] si:{0,180}
+FrameVariant: помогать (6, 1) b:[a0->a1[pos]] id:(0_8)
+Text: У США сейчас нет особого смысла помогать Украине .
+-----------
+File: text-processing-data/Sources/news_2017/201701/01012017-041900-R517864765_htm.zip/01012017-061055-R517870099.htm
+TextID: 2530
+Object: 'асад' b:(0,1) oi:[0] si:{15} d:ner <AUTH>
+Object: 'рф' b:(3,1) oi:[1] si:{4} d:ner <AUTH>
+Object: 'сирия' b:(10,1) oi:[2] si:{288} d:ner <AUTH>
+Attitude: 'асад'->'рф' b:(1) oi:[0, 1] si:{15,4}
+FrameVariant: содействовать (2, 1) b:[a0->a1[pos]] id:(0_8)
+FrameVariant: соглашение (6, 1) b:[a0->a1[pos]] id:(0_111)
+Title: Асад готов содействовать РФ в реализации соглашения по перемирию в Сирии
+-----------
+File: text-processing-data/Sources/news_2017/201701/01012017-080655-R517875534_htm.zip/01012017-100015-R517881509.htm
+TextID: 3610
+Object: 'россия' b:(4,1) oi:[0] si:{4} d:ner <AUTH>
+Object: 'сша' b:(9,1) oi:[1] si:{0} d:ner <AUTH>
+Attitude: 'россия'->'сша' b:(-1) oi:[0, 1] si:{4,0}
+FrameVariant: усомниться (1, 1) b:[a0->a1[neg]] id:(0_32)
+FrameVariant: атака (7, 1) b:[a0->a1[neg]] id:(0_152)
+Title: Трамп усомнился в причастности России к хакерским атакам в США
+Sentence: 0
+Object: 'россия' b:(4,1) oi:[0] si:{4} d:ner <AUTH>
+Object: 'сша' b:(9,1) oi:[1] si:{0} d:ner <AUTH>
+Attitude: 'россия'->'сша' b:(-1) oi:[0, 1] si:{4,0}
+FrameVariant: усомниться (1, 1) b:[a0->a1[neg]] id:(0_32)
+FrameVariant: атака (7, 1) b:[a0->a1[neg]] id:(0_152)
+Text: Трамп усомнился в причастности России к хакерским атакам в США фото © РИА Новости .
+Sentence: 2
+Object: 'reuters' b:(9,1) oi:[0] si:{596} d:ner
+Object: 'сша' b:(13,1) oi:[1] si:{0} d:ner <AUTH>
+Object: 'дональд трамп' b:(14,2) oi:[2] si:{439} d:ner
+Object: 'россия' b:(19,1) oi:[3] si:{4} d:ner <AUTH>
+Attitude: 'россия'->'сша' b:(-1) oi:[3, 1] si:{4,0}
+FrameVariant: представлять (1, 1) b:[a0->a1[pos]] id:(0_9)
+FrameVariant: сообщать (7, 1) b:[] id:(1_2)
+FrameVariant: усомниться (16, 1) b:[a0->a1[neg]] id:(0_32)
+Text: Он представит ее на следующей неделе Как сообщает агентство Reuters , избранный президент США Дональд Трамп усомнился , что Россия ответственна за кибератаки в США .
+Sentence: 7
+Object: 'сша' b:(4,1) oi:[0] si:{0} d:ner <AUTH>
+Object: 'россия' b:(6,1) oi:[1] si:{4} d:ner <AUTH>
+Attitude: 'россия'->'сша' b:(-1) oi:[1, 0] si:{4,0}
+FrameVariant: обвинять (5, 1) b:[a0->a1[neg]] id:(0_159)
+Text: Ранее сообщалось , что США обвинили Россию в причастности к кибератакам в США во время выборов .
+-----------
