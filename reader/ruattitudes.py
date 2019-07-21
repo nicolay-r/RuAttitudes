@@ -29,7 +29,7 @@ class RuAttitudesFormatReader(object):
         title = None
         title_terms_count = None
         text_terms_count = None
-        processed_sentences = []
+        sentences = []
         opinions_list = []
         objects_list = []
         s_index = 0
@@ -69,7 +69,7 @@ class RuAttitudesFormatReader(object):
                                  ref_opinions=opinions_list,
                                  objects_list=objects_list,
                                  sentence_index=-1)
-                processed_sentences.append(title)
+                sentences.append(title)
                 assert(title_terms_count == len(title.ParsedText) or title_terms_count is None)
                 reset = True
 
@@ -79,14 +79,14 @@ class RuAttitudesFormatReader(object):
                                     ref_opinions=opinions_list,
                                     objects_list=objects_list,
                                     sentence_index=s_index)
-                processed_sentences.append(sentence)
+                sentences.append(sentence)
                 assert(text_terms_count == len(sentence.ParsedText) or text_terms_count is None)
                 reset = True
 
             if RuAttitudesFormatReader.NEWS_SEP_KEY in line and title is not None:
-                yield News(processed_sentences=processed_sentences,
+                yield News(sentences=sentences,
                            news_index=news_index)
-                processed_sentences = []
+                sentences = []
                 reset = True
 
             if reset:
@@ -95,12 +95,12 @@ class RuAttitudesFormatReader(object):
                 title_terms_count = None
                 reset = False
 
-        if len(processed_sentences) > 0:
-            yield News(processed_sentences=processed_sentences,
+        if len(sentences) > 0:
+            yield News(sentences=sentences,
                        news_index=news_index)
-            processed_sentences = []
+            sentences = []
 
-        assert(len(processed_sentences) == 0)
+        assert(len(sentences) == 0)
 
     @staticmethod
     def __parse_opinion(line, objects_list):
