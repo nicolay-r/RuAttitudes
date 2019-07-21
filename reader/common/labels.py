@@ -1,4 +1,4 @@
-class Label(object):
+class Label:
 
     @staticmethod
     def from_int(value):

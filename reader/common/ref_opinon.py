@@ -1,4 +1,4 @@
-from parser.common.labels import Label
+from reader.common.labels import Label
 
 
 class RefOpinion(object):

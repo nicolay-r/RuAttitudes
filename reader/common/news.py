@@ -1,4 +1,4 @@
-from parser.common.sentence import Sentence
+from reader.common.sentence import Sentence
 
 
 class News(object):
@@ -23,9 +23,6 @@ class News(object):
         for sentence in self.__processed_sentences:
             assert(isinstance(sentence, Sentence))
             sentence.set_owner(self)
-
-    def get_sentence(self, index):
-        return self.__processed_sentences[index]
 
     def iter_sentences(self):
         for sentence in self.__processed_sentences:

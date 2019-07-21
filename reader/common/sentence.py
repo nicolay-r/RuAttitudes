@@ -1,4 +1,4 @@
-from parser.common.ref_opinon import RefOpinion
+from reader.common.ref_opinon import RefOpinion
 
 
 class Sentence(object):
