@@ -1,6 +1,8 @@
 # RuAttitudes 1.0
 
-**RuAttitudes** -- is a collection for machine learning model training. 
+**RuAttitudes** -- is a collection of automatically labeled sentiment attitudes,
+which is developed using **distant supervision** (DS) approach.
+It is considered as an application for machine learning model training. 
 This repository provides a collection and **reader** (written in Python).
 The collection has been developed and verbosely described in following paper:
 
@@ -38,15 +40,16 @@ Figure below illustrates training collection development flow.
 
 ## Quick Start: Format Description
 
-* Checkout [[sample]](sample.txt)
-
-* Checkout [reader example](read.py), written in Python.
-
 * The template of each line is as follows:
 
 ```
     [KEYWORD] ':' [VALUE] [OPTIONS]
 ```
+
+* Checkout [sample](sample.txt);
+
+* Checkout [reader example](read.py), written in Python.
+
     
 ## Detailed Options Description
 
@@ -74,8 +77,18 @@ where ```type``` denotes:
     [NER tool](https://github.com/nicolay-r/ner-flask-wrapper) 
     (Bi-LSTM+CRF model) 
     [[paper]](https://arxiv.org/pdf/1603.01360.pdf);
-    * ```restored``` -- entity was missed by NER but **restored** using a list of authorized objects;
-* ```<AUTH>``` -- optional; if present, denotes that related object is belong a list of authorized object; 
+    * ```restored``` -- entity was missed by NER but **restored** using a 
+    [list of authorized objects](data/auth_list.txt) (see NOTE);
+* ```<AUTH>``` -- optional; if present, denotes that related object is belong a 
+    [list of authorized object](data/auth_list.txt) (see NOTE); 
+    
+>NOTE: List of authorized objects list presented in a form of **relations**, where each relation has 
+the following format: ```source```->```target```.
+
+>Object ```x``` is belong the list of authorised objects, when there is at least a single relation
+with 
+```source == x``` or 
+```target == x```.
 
 ##### For **Attitude** keyword
 
@@ -90,7 +103,7 @@ Attitude: 'сша'->'украина' b:(1) oi:[1, 2] si:{0,180}
     * ```source``` -- unsigned int value, is a reference to the **Object**;
     * ```target``` -- unsigned int value, is a reference to the **Object**;
     
-* si:{```source```, ```target```} -- **s**inonym **i**ndices of ```source``` and ```target```.
+* si:{```source```, ```target```} -- **s**ynonym **i**ndices of ```source``` and ```target```.
     * ```source``` -- index of synonym group;
     * ```target``` -- index of synonym group;
     
