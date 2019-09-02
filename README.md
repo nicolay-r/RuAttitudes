@@ -26,9 +26,15 @@ between mentioned named entities in text**.
 We use two different methods of sentiment attitude annotation, applied to the news title:
 * **Pair-Based** -- utilizing the [pre-assigned attitudes](data/auth_list.txt),
 organized in a list of pairs;
+
+
 * **Frame-Based** -- utilizing frame entries from the
 [RuSentiFrames](https://github.com/nicolay-r/RuSentiFrames)
 lexicon.
+
+> In case of Pair-Based method, we start with **RuSentRel** attitudes and use related preassigned attitudes.
+The changes has been applied in further towards a pair-based list -- is a result of a correlation analysis of a frame-based method 
+a pair-based; The attitudes with the significant contradictions has been analysed to decide what should be removed.
 
 We intersect the annotations and separate result:
 * With the **different** polarity according to both sources.
