@@ -3,11 +3,13 @@ from .bound import Bound
 
 class TextObject(object):
 
-    def __init__(self, terms, position):
+    def __init__(self, terms, obj_type, position):
         assert(isinstance(terms, list))
         assert(isinstance(position, int))
+        assert(isinstance(obj_type, str) or obj_type is None)
         self.__terms = terms
         self.__position = position
+        self.__type = obj_type
         self.__tag = None
 
     @property
@@ -17,6 +19,10 @@ class TextObject(object):
     @property
     def Tag(self):
         return self.__tag
+
+    @property
+    def Type(self):
+        return self.__type
 
     def set_tag(self, value):
         self.__tag = value

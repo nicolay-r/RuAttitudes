@@ -37,6 +37,8 @@ class RuAttitudesFormatReader(object):
 
         for line in input_file.readlines():
 
+            line = line.decode('utf-8')
+
             if RuAttitudesFormatReader.FILE_KEY in line:
                 pass
 
@@ -146,7 +148,11 @@ class RuAttitudesFormatReader(object):
         term_index, length = line[b_from+3:b_to].split(',')
         terms = line[o_begin+1:o_end].split(',')
 
-        text_object = TextObject(terms=terms, position=int(term_index))
+        obj_type = RuAttitudesFormatReader.__try_get_type(line)
+
+        text_object = TextObject(terms=terms,
+                                 position=int(term_index),
+                                 obj_type=obj_type)
 
         sg_from = line.index('si:{')
         sg_to = line.index('}', sg_from)
@@ -184,3 +190,14 @@ class RuAttitudesFormatReader(object):
     def __parse_text_index(line):
         line = line[len(RuAttitudesFormatReader.TEXT_IND_KEY):]
         return int(line)
+
+    @staticmethod
+    def __try_get_type(line):
+        template = u't:['
+
+        if template not in line:
+            return None
+
+        t_from = line.index(template)
+        t_to = line.index(u']', t_from)
+        return line[t_from + len(template):t_to]
