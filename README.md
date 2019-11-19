@@ -1,4 +1,17 @@
-# RuAttitudes 1.0
+# RuAttitudes 1.1
+
+> **Update October 19'th, 2019, Version 1.1**: 
+Each entity now include types "**t:[TYPE]**", 
+where TYPE could be as follows: 
+Location (LOC), 
+Person (PER), 
+Organization (ORG);
+
+> NOTE: For types for authorized objects were taken from 
+[RuSentRel](https://github.com/nicolay-r/RuSentRel) collection;
+For others, related types is a results of utilized 
+[NER tool](https://github.com/nicolay-r/ner-flask-wrapper).
+    
 
 **RuAttitudes** -- is a collection of automatically labeled sentiment attitudes,
 which is developed using **distant supervision** (DS) approach.
@@ -9,8 +22,17 @@ The collection has been developed and verbosely described in following paper:
 * Distant Supervision for Sentiment Attitude Extraction
 [[paper-ranlp-proceeding]](http://lml.bas.bg/ranlp2019/proceedings-ranlp-2019.pdf),
 [[poster]](docs/ranlp_2019_poster_portrait.pdf)
-    * Rusnachenko Nikolay, Loukachevitch Natalia, Tutubalina Elena
+    * Rusnachenko Nicolay, Loukachevitch Natalia, Tutubalina Elena
     * RANLP-2019
+    
+# Contents
+* [Introduction](#introduction)
+* [Training set Creation](#how-we-created-a-training-set)
+* [Format Description](#quick-start-format-description)
+* [Options Description](#detailed-options-description)
+* [Reader](#collection-reader) ![](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
+* [Application](#application-and-experiments)
+* [References](#references)
 
 ## Introduction
 
@@ -85,6 +107,8 @@ where ```type``` denotes:
     [[paper]](https://arxiv.org/pdf/1603.01360.pdf);
     * ```restored``` -- entity was missed by NER but **restored** using a
     [list of authorized objects](data/auth_list.txt) (see NOTE);
+* t:[```TYPE```] -- entity type:
+    * `TYPE` -- could be one of the following: LOC, PER, ORG;
 * ```<AUTH>``` -- optional; if present, denotes that related object is belong a
     [list of authorized object](data/auth_list.txt) (see NOTE);
 
@@ -132,7 +156,8 @@ FrameVariant: помогать (6, 1) b:[a0->a1[pos]] id:(0_8)
 * id:(``id``) -- identifier in RuSentiFrames lexicon:
     * ``id`` -- key in json dictionary of [RuSentiFrames](https://github.com/nicolay-r/RuSentiFrames) lexicon;
 
-## Collection Reader ![](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
+## Collection Reader 
+![](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
 
 Folder `reader` contains a collection reader (source file parsers), written in Python-3.6.
 
