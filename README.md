@@ -7,9 +7,9 @@ This repository provides a collection and **reader** (written in Python).
 The collection has been developed and verbosely described in following paper:
 
 * Distant Supervision for Sentiment Attitude Extraction
-[[paper]](),
+[[paper-in-proceedings]](http://lml.bas.bg/ranlp2019/proceedings-ranlp-2019.pdf),
 [[poster]](docs/ranlp_2019_poster_portrait.pdf)
-    * Rusnachenko Nikolay, Loukachevitch Natalia, Tutubalina Elena
+    * Rusnachenko Nicolay, Loukachevitch Natalia, Tutubalina Elena
     * RANLP-2019
 
 ## Introduction
@@ -144,5 +144,11 @@ Please refer to [read.py](read.py), as it provides an example of how this collec
 [[code-repository]](https://github.com/nicolay-r/attitudes-extraction-ds).
 
 ## References
-
-> NOTE: This section will be updated since the related paper become available at aclweb.
+```
+@article{rusnachenko2019distant,
+  title={Distant Supervision for Sentiment Attitude Extraction},
+  author={Rusnachenko, Nicolay and Loukachevitch, Natalia and Tutubalina, Elena},
+  booktitle={RANLP},
+  year={2019}
+}
+```
