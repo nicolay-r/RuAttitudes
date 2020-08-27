@@ -1,4 +1,7 @@
-# RuAttitudes 1.1
+# RuAttitudes 1.2
+
+> **Update August 27'th, 2020, Version 1.2**: fixed bug with '-1' (unknown synonyms) in news titles;
+Added list of synonyms, and pairs inside a collection.
 
 > **Update October 19'th, 2019, Version 1.1**: 
 Each entity now include types "**t:[TYPE]**", 
@@ -46,8 +49,8 @@ between mentioned named entities in text**.
 ## How We Created a Training Set
 
 We use two different methods of sentiment attitude annotation, applied to the news title:
-* **Pair-Based** -- utilizing the [pre-assigned attitudes](data/auth_list.txt),
-organized in a list of pairs;
+* **Pair-Based** -- utilizing the pre-assigned attitudes,
+organized in a list of pairs (`pair_list.txt` inside of a `ruattitudes-v1_2.zip`);
 
 
 * **Frame-Based** -- utilizing frame entries from the
