@@ -1,40 +1,22 @@
-# RuAttitudes 1.2
-
-> **Update August 27'th, 2020, Version 1.2**: fixed bug with '-1' (unknown synonyms) in news titles;
-Added list of synonyms, and pairs inside a collection.
-
-> **Update October 19'th, 2019, Version 1.1**: 
-Each entity now include types "**t:[TYPE]**", 
-where TYPE could be as follows: 
-Location (LOC), 
-Person (PER), 
-Organization (ORG);
-
-> NOTE: For types for authorized objects were taken from 
-[RuSentRel](https://github.com/nicolay-r/RuSentRel) collection;
-For others, related types is a results of utilized 
-[NER tool](https://github.com/nicolay-r/ner-flask-wrapper).
-    
+# RuAttitudes 2.0
 
 **RuAttitudes** -- is a collection of automatically labeled sentiment attitudes,
 which is developed using **distant supervision** (DS) approach.
 It is considered as an application for machine learning model training.
 This repository provides a collection and **reader** (written in Python).
-The collection has been developed and verbosely described in following paper:
 
-* Distant Supervision for Sentiment Attitude Extraction
-[[paper-ranlp-proceeding]](http://lml.bas.bg/ranlp2019/proceedings-ranlp-2019.pdf),
-[[poster]](docs/ranlp_2019_poster_portrait.pdf)
-    * Rusnachenko Nicolay, Loukachevitch Natalia, Tutubalina Elena
-    * RANLP-2019
-    
+## Download
+
+[RuAttitudes-2.0-base (2.8 mln. news processed)](https://www.dropbox.com/s/y39vqzzjumqhce1/ruattitudes_20_base.zip?dl=1)
+
+[RuAttitudes-2.0-large (8.8 mln. news processed)](https://www.dropbox.com/s/43iqoxlyh38qk8u/ruattitudes_20_large.zip?dl=1)
+
 # Contents
 * [Introduction](#introduction)
 * [Training set Creation](#how-we-created-a-training-set)
 * [Format Description](#quick-start-format-description)
 * [Options Description](#detailed-options-description)
 * [Reader](#collection-reader) ![](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
-* [Application](#application-and-experiments)
 * [References](#references)
 
 ## Introduction
@@ -43,29 +25,6 @@ News articles often convey attitudes between the mentioned subjects, which is es
 
 This RuAttitudes is a result collection of an application of a new approach to distant supervision for **extracting sentiment attitudes
 between mentioned named entities in text**.
-
->**Example**: ``... **[USA]** is considering the possibility of new sanctions against
-    **[Russia]** ... ''. This context illustrates a negative **USA🠆Russia** attitude.
-## How We Created a Training Set
-
-We use two different methods of sentiment attitude annotation, applied to the news title:
-* **Pair-Based** -- utilizing the pre-assigned attitudes,
-organized in a list of pairs (`pair_list.txt` inside of a `ruattitudes-v1_2.zip`);
-
-
-* **Frame-Based** -- utilizing frame entries from the
-[RuSentiFrames](https://github.com/nicolay-r/RuSentiFrames)
-lexicon.
-
-> In case of Pair-Based method, we start with **RuSentRel** attitudes and use related preassigned attitudes.
-The changes has been applied in further towards a pair-based list -- is a result of a correlation analysis of a frame-based method 
-a pair-based; The attitudes with the significant contradictions has been analysed to decide what should be removed.
-
-We intersect the annotations and separate result:
-* With the **different** polarity according to both sources.
-* With the **same** polarity -- is a result collection (RuAttitudes);
-
-Figure below illustrates training collection development flow.
 
 ![](images/flow.png)
 
@@ -166,18 +125,4 @@ Folder `reader` contains a collection reader (source file parsers), written in P
 
 Please refer to [read.py](read.py), as it provides an example of how this collection could be parsed/readed.
 
-## Application and Experiments
-
-1. Application in Sentiment Attitude Classification Task of Analytical Articles, written in Russian
-[[code-repository]](https://github.com/nicolay-r/attitudes-extraction-ds).
-
 ## References
-
-```
-@article{rusnachenko2019distant,
-  title={Distant Supervision for Sentiment Attitude Extraction},
-  author={Rusnachenko, Nicolay and Loukachevitch, Natalia and Tutubalina, Elena},
-  booktitle={RANLP},
-  year={2019}
-}
-```
