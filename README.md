@@ -31,5 +31,18 @@ Folder `reader` contains a collection reader (source file parsers), written in P
 
 Please refer to [read.py](read.py), as it provides an example of how this collection could be parsed/readed.
 
+
 ## References
-> To be updated.
+```
+@inproceedings{rusnachenko2021language,
+    title={Language Models Application in Sentiment Attitude Extraction Task},
+    author={Rusnachenko, Nicolay},
+    booktitle={Proceedings of the Institute for System Programming of the RAS (Proceedings of ISP RAS), vol.33},
+    year={2021},
+    number={3},
+    pages={199--222},
+    authorvak={true},
+    authorconf={false},
+    language={russian}
+}
+
