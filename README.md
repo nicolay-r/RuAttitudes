@@ -1,5 +1,11 @@
 # RuAttitudes 2.0
 
+[![](https://img.shields.io/badge/AREkit--ss_Compatible-0.23.1-purple.svg)](https://github.com/nicolay-r/arekit-ss#usage)
+
+> 📓 **Update 01 October 2023**: this collection **is now available in [arekit-ss](https://github.com/nicolay-r/arekit-ss)**
+> for a [quick sampling](https://github.com/nicolay-r/arekit-ss#usage) of contexts with all subject-object relation mentions with just **single script into
+> `JSONL/CSV/SqLite`** including (optional) language transfering 🔥 [[Learn more ...]](https://github.com/nicolay-r/arekit-ss#usage)
+
 **RuAttitudes** -- is a collection of automatically labeled sentiment attitudes,
 which is developed using **distant supervision** (DS) approach.
 It is considered as an application for machine learning model training.
@@ -26,6 +32,11 @@ See the following [documentation](docs/Format.md).
 ## Collection Reader 
 
 ![](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
+[![](https://img.shields.io/badge/AREkit--ss_Compatible-0.23.1-purple.svg)](https://github.com/nicolay-r/arekit-ss#usage)
+
+> 📓 **Update 01 October 2023**: this collection **is now available in [arekit-ss](https://github.com/nicolay-r/arekit-ss)**
+> for a [quick sampling](https://github.com/nicolay-r/arekit-ss#usage) of contexts with all subject-object relation mentions with just **single script into
+> `JSONL/CSV/SqLite`** including (optional) language transfering 🔥 [[Learn more ...]](https://github.com/nicolay-r/arekit-ss#usage)
 
 Folder `reader` contains a collection reader (source file parsers), written in Python-3.6.
 
